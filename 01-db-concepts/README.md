@@ -1,7 +1,7 @@
 # Databases in one view
 
 | Title | Type of Database | Summary | Use Case | Version |
-| --- | --- | --- | --- | --- | --- |
+| --- | --- | --- | --- | --- | 
 | MySQL | Relational DBMS | Open-source RDBMS with high-speed storage and retrieval engine suitable for read-heavy applications. | Web applications, e-commerce, data warehousing | 8.0 |
 | Oracle | Relational, Multi-model DBMS | A popular commercial RDBMS with detailed vendor-provided information available. | Enterprise applications, data warehousing, e-commerce | 12c |
 | PostgreSQL | Relational DBMS | Open-source RDBMS with advanced features such as support for JSON and spatial data. | Geospatial applications, data analysis, time-series data | 13 |

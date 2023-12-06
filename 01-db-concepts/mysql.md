@@ -27,6 +27,28 @@ COMMIT;
 
 ## Cache
 
+## Optimization [🔗](https://dev.mysql.com/doc/refman/5.7/en/switchable-optimizations.html)
+
+```mysql
+mysql> SET optimizer_switch='index_merge_union=off,index_merge_sort_union=off';
+
+mysql> SELECT @@optimizer_switch\G
+*************************** 1. row ***************************
+@@optimizer_switch: index_merge=on,index_merge_union=off,
+                    index_merge_sort_union=off,
+                    index_merge_intersection=on,
+                    engine_condition_pushdown=on,
+                    index_condition_pushdown=on,
+                    mrr=on,mrr_cost_based=on,
+                    block_nested_loop=on,batched_key_access=off,
+                    materialization=on,semijoin=on,loosescan=on,
+                    firstmatch=on,duplicateweedout=on,
+                    subquery_materialization_cost_based=on,
+                    use_index_extensions=on,
+                    condition_fanout_filter=on,derived_merge=on,
+                    prefer_ordering_index=on
+```
+
 ## Lock database
 
 ## Trigger [🔗](https://dev.mysql.com/doc/refman/5.7/en/trigger-syntax.html)

@@ -27,6 +27,8 @@ COMMIT;
 
 ## Cache
 
+## Lock database
+
 ## Trigger [🔗](https://dev.mysql.com/doc/refman/5.7/en/trigger-syntax.html)
 
 ```mysql

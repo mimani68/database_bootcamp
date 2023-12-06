@@ -25,11 +25,17 @@ COMMIT;
 
 ## Indexes
 
-| Title | Description |
-|:-----:|:-----------:|
-| Primary Key | The primary key for a table represents the column or set of columns that you use in your most vital queries. It has an associated index, for fast query performance. Query performance benefits from the NOT NULL optimization, because it cannot include any NULL values. With the InnoDB storage engine, the table data is physically organized to do ultra-fast lookups and sorts based on the primary key column or columns. |
-| SPATIAL | The optimizer checks the SRID attribute for indexed columns to determine which spatial reference system (SRS) to use for comparisons, and uses calculations appropriate to the SRS. |
-|  |  |
+| Title | Engine | Description |
+|:-----:|:---:|:-----------:|
+| Primary Key | B-trees | The primary key for a table represents the column or set of columns that you use in your most vital queries. It has an associated index, for fast query performance. Query performance benefits from the NOT NULL optimization, because it cannot include any NULL values. With the InnoDB storage engine, the table data is physically organized to do ultra-fast lookups and sorts based on the primary key column or columns. |
+| UNIQUE | B-trees | |
+| INDEX | B-trees | |
+| FULLTEXT | B-trees | |
+| SPATIAL | Hash | The MyISAM, InnoDB, NDB, and ARCHIVE storage engines support spatial columns such as POINT and GEOMETRY.. The optimizer checks the SRID attribute for indexed columns to determine which spatial reference system (SRS) to use for comparisons, and uses calculations appropriate to the SRS. |
+
+```mysql
+CREATE INDEX id_index ON lookup (id) USING BTREE;
+```
 
 ## Cache
 

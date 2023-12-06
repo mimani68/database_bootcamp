@@ -25,6 +25,12 @@ COMMIT;
 
 ## Indexes
 
+| Title | Description |
+|:-----:|:-----------:|
+| Primary Key | The primary key for a table represents the column or set of columns that you use in your most vital queries. It has an associated index, for fast query performance. Query performance benefits from the NOT NULL optimization, because it cannot include any NULL values. With the InnoDB storage engine, the table data is physically organized to do ultra-fast lookups and sorts based on the primary key column or columns. |
+| SPATIAL | The optimizer checks the SRID attribute for indexed columns to determine which spatial reference system (SRS) to use for comparisons, and uses calculations appropriate to the SRS. |
+|  |  |
+
 ## Cache
 
 ## Optimization [🔗](https://dev.mysql.com/doc/refman/5.7/en/switchable-optimizations.html)
